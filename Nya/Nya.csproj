@@ -50,6 +50,9 @@
         <Reference Include="PlatformUserModel">
           <HintPath>E:\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\Managed\PlatformUserModel.dll</HintPath>
         </Reference>
+        <Reference Include="Tweening">
+          <HintPath>E:\SteamLibrary\steamapps\common\Beat Saber\Beat Saber_Data\Managed\Tweening.dll</HintPath>
+        </Reference>
         <Reference Include="Unity.TextMeshPro">
             <HintPath>$(BeatSaberDir)\Beat Saber_Data\Managed\Unity.TextMeshPro.dll</HintPath>
             <Private>False</Private>

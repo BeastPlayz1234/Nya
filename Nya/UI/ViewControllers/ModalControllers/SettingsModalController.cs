@@ -149,12 +149,8 @@ namespace Nya.UI.ViewControllers.ModalControllers
 
         private void DropDownButtonClicked(ModalView modalView, Button button)
         {
-<<<<<<< Updated upstream
-            modalView.SetupView(RootTransform);
-=======
             // No idea what those commented lines were for, but the plugin is still working without them so ¯\_(ツ)_/¯
             // modalView.SetupView(RootTransform);
->>>>>>> Stashed changes
             modalView.SetField("_parentCanvasGroup", ModalView.gameObject.GetComponent<CanvasGroup>());
             modalView.Show(true);
 
