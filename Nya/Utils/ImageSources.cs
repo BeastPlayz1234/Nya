@@ -47,7 +47,8 @@ namespace Nya.Utils
                     NsfwEndpoints = new List<string> { "ero", "ass", "hentai", "milf", "oral", "paizuri", "ecchi" }
                 }
             },
-            {
+            // Just getting rid of this until i come up with another api to put here
+            /*{
                 "Catboys", new SourceData
                 {
                     BaseEndpoint = "https://api.catboys.com/",
@@ -58,7 +59,7 @@ namespace Nya.Utils
                     },
                     NsfwEndpoints = new List<string>()
                 }
-            },
+            },*/
             {
                 "BocchiTheAPI", new SourceData
                 {
