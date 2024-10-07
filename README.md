@@ -1,3 +1,8 @@
+# NOTE
+This mod was originally made by [Sirspam](https://github.com/Sirspam/)
+I also barely know C# so if there's any issues with the mod, it's probably due to my patch job of putting this mod on the newer version
+If anything doesn't work, dm me on discord (beastplayz_) or something
+
 # Nya <img src="https://raw.githubusercontent.com/Sirspam/Sirspam/main/chocola_mini_sitting.png" align="right" width="150">
 A BeatSaber mod for displaying nya-tastic images from various web APIs
 ## Usage
@@ -11,7 +16,7 @@ Nya features a floating screen, allowing Nya to be accessed outside of the gamep
 **Note: I don't own any of these sources so I can't guarantee the images will always be appropriate**
 * [Waifu.Pics](https://waifu.pics/)
 * [Nekos.Life](https://nekos.life/)
-* [Waif.imI](https://www.waifu.im/)
+* [Waifu.Im](https://www.waifu.im/)
 * [Catboys](https://catboys.com/)
 * [BocchiTheAPI](https://bocchi.pixelboom.dev/)
 * [Local Files](#local-files)
@@ -29,6 +34,6 @@ Images which are downloaded via Nya will be saved in the sfw / nsfw folders.
 * [SiraUtil](https://github.com/Auros/SiraUtil) _- Available in ModAssistant_
 * [BeatSaberMarkupLanguage](https://github.com/monkeymanboy/BeatSaberMarkupLanguage) _- Available in ModAssistant_
 ## Contribution
-Feel free to point out any suggestions or improvements by submitting a PR or contacting me on Discord ([Sirspam#7765](https://discordapp.com/users/232574143818760192)).
+Please submit a PR if you have any way to fix my awful code, I'd really appreciate it!!!
 
 ![Nya Gif](NyaGif.gif)
