@@ -133,7 +133,7 @@ namespace Nya.UI.ViewControllers.ModalControllers
         {
             if (!ModalView && !_parsed)
             {
-                BSMLParser.instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "Nya.UI.Views.SettingsModalView.bsml"), parentTransform.gameObject, host);
+                BSMLParser.Instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "Nya.UI.Views.SettingsModalView.bsml"), parentTransform.gameObject, host);
                 ModalView.name = "NyaSettingsModal";
                 ModalView.gameObject.AddComponent<CanvasGroup>();
                 Button[] buttons = { ApiDropDownTransform.Find("DropDownButton").GetComponent<Button>(), SfwDropDownTransform.Find("DropDownButton").GetComponent<Button>(), NsfwDropDownTransform.Find("DropDownButton").GetComponent<Button>() };
@@ -149,13 +149,18 @@ namespace Nya.UI.ViewControllers.ModalControllers
 
         private void DropDownButtonClicked(ModalView modalView, Button button)
         {
+<<<<<<< Updated upstream
             modalView.SetupView(RootTransform);
+=======
+            // No idea what those commented lines were for, but the plugin is still working without them so ¯\_(ツ)_/¯
+            // modalView.SetupView(RootTransform);
+>>>>>>> Stashed changes
             modalView.SetField("_parentCanvasGroup", ModalView.gameObject.GetComponent<CanvasGroup>());
             modalView.Show(true);
-            
+
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() => modalView.Show(true));
-            button.GetComponent<SignalOnUIButtonClick>().Start();
+            // button.GetComponent<SignalOnUIButtonClick>().Start();
         }
 
         protected void ShowModal(Transform parentTransform, object host)
@@ -406,12 +411,12 @@ namespace Nya.UI.ViewControllers.ModalControllers
         {
             if (ImageSources.Sources[APIValue].NsfwEndpoints.Count == 0)
             {
-                NsfwDropDownListSetting.values = new List<object> {"Empty"};
+                NsfwDropDownListSetting.Values = new List<object> {"Empty"};
                 NsfwDropDownListSetting.UpdateChoices();
                 NsfwDropDownListSetting.Value = "Empty";
                 NsfwCheck = false;
-                NsfwCheckbox.interactable = false;
-                NsfwDropDownListSetting.interactable = false;
+                NsfwCheckbox.Interactable = false;
+                NsfwDropDownListSetting.Interactable = false;
                 return false;
             }
 
@@ -420,28 +425,28 @@ namespace Nya.UI.ViewControllers.ModalControllers
 
         private void UpdateLists()
         {
-            SfwDropDownListSetting.values.Clear();
-            SfwDropDownListSetting.values = ImageSources.Sources[APIValue].SfwEndpoints.Cast<object>().ToList();
-            if (SfwDropDownListSetting.values.Count > 1)
+            SfwDropDownListSetting.Values.Clear();
+            SfwDropDownListSetting.Values = ImageSources.Sources[APIValue].SfwEndpoints.Cast<object>().ToList();
+            if (SfwDropDownListSetting.Values.Count > 1)
             {
-                SfwDropDownListSetting.values.Add("Random");
+                SfwDropDownListSetting.Values.Add("Random");
             }
             SfwDropDownListSetting.Value = SfwValue;
             SfwDropDownListSetting.UpdateChoices();
 
             if (CheckNsfwListHasEndpoints())
             {
-                if (NsfwDropDownListSetting.interactable == false)
+                if (NsfwDropDownListSetting.Interactable == false)
                 {
-                    NsfwCheckbox.interactable = true;
-                    NsfwDropDownListSetting.interactable = true;
+                    NsfwCheckbox.Interactable = true;
+                    NsfwDropDownListSetting.Interactable = true;
                 }
                 
-                NsfwDropDownListSetting.values.Clear();
-                NsfwDropDownListSetting.values = ImageSources.Sources[APIValue].NsfwEndpoints.Cast<object>().ToList();
-                if (NsfwDropDownListSetting.values.Count > 1)
+                NsfwDropDownListSetting.Values.Clear();
+                NsfwDropDownListSetting.Values = ImageSources.Sources[APIValue].NsfwEndpoints.Cast<object>().ToList();
+                if (NsfwDropDownListSetting.Values.Count > 1)
                 {
-                    NsfwDropDownListSetting.values.Add("Random");
+                    NsfwDropDownListSetting.Values.Add("Random");
                 }
                 NsfwDropDownListSetting.Value = NsfwValue;
                 NsfwDropDownListSetting.UpdateChoices();

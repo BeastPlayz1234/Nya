@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -106,8 +107,18 @@ namespace Nya.Utils
                 {
                     return null;
                 }
-
                 var endpointResult = JsonConvert.DeserializeObject<WebAPIEntries>(Encoding.UTF8.GetString(response));
+                if (ImageSources.Sources[_pluginConfig.SelectedAPI].BaseEndpoint == "https://api.waifu.im/search?included_tags=")
+                {
+                    var result2 = JsonConvert.DeserializeObject<Dictionary<string, object>>(Encoding.UTF8.GetString(response));
+                    var deeper = JsonConvert.SerializeObject(result2["images"]);
+                    var farther = deeper.Substring(1, deeper.Length - 2);
+                    var result3 = JsonConvert.DeserializeObject<Dictionary<string, object>>(farther);
+                    var last = JsonConvert.SerializeObject(result3["url"]);
+                    var realFinal = last.Substring(1, last.Length - 2);
+                    _nyaImageEndpoint = realFinal.Split('/').Last();
+                    return realFinal;
+                }
                 if (endpointResult?.Url == null)
                 {
                     _siraLog.Error($"Couldn't find url value in response: {JsonConvert.SerializeObject(Encoding.UTF8.GetString(response))}");

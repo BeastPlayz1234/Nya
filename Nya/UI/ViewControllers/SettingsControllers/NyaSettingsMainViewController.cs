@@ -89,8 +89,8 @@ namespace Nya.UI.ViewControllers.SettingsControllers
                 _diContainer.InstantiateComponent<NyaSettingsClickableImage>(_chocolaImage.gameObject);
                 _diContainer.InstantiateComponent<NyaSettingsClickableImage>(_vanillaImage.gameObject);
 
-                BgColorSetting.modalColorPicker.doneEvent += dontCareDidntAsk => _pluginConfig.UseBackgroundColor = true;
-                BgColorSetting.modalColorPicker.cancelEvent += BgColorSettingCancelled;
+                BgColorSetting.ModalColorPicker.DoneEvent += dontCareDidntAsk => _pluginConfig.UseBackgroundColor = true;
+                BgColorSetting.ModalColorPicker.CancelEvent += BgColorSettingCancelled;
                             
                 var gitVersion = await _siraSyncService.LatestVersion();
                 if (gitVersion != null && gitVersion > _pluginMetadata.HVersion)
@@ -109,7 +109,7 @@ namespace Nya.UI.ViewControllers.SettingsControllers
 
             if (_pluginConfig.RainbowBackgroundColor)
             {
-                BgColorSetting.interactable = false;
+                BgColorSetting.Interactable = false;
                 BgColorDefaultButton.interactable = false;
             }
         }

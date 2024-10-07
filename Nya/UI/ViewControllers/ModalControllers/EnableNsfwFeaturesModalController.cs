@@ -147,12 +147,17 @@ namespace Nya.UI.ViewControllers.ModalControllers
 		{
 			if (!_modalView && !_parsed)
 			{
-				BSMLParser.instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "Nya.UI.Views.EnableNsfwFeaturesModalView.bsml"), parentTransform.gameObject, this);
+				BSMLParser.Instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "Nya.UI.Views.EnableNsfwFeaturesModalView.bsml"), parentTransform.gameObject, this);
 				_modalView.name = "NyaEnableNsfwFeaturesModal";
+<<<<<<< Updated upstream
 				_presentPanelAnimation = _modalView.GetField<PanelAnimationSO, ModalView>("_presentPanelAnimations");
 				_dismissPanelAnimation = _modalView.GetField<PanelAnimationSO, ModalView>("_dismissPanelAnimation");
+=======
+                _presentPanelAnimation = _modalView.GetField<PanelAnimationSO, ModalView>("_presentPanelAnimations");
+                _dismissPanelAnimation = _modalView.GetField<PanelAnimationSO, ModalView>("_dismissPanelAnimation");
+>>>>>>> Stashed changes
 
-				_parsed = true;
+                _parsed = true;
 			}
 
 			_mainLayoutGameObject.SetActive(true);
@@ -291,9 +296,9 @@ namespace Nya.UI.ViewControllers.ModalControllers
 
 		private static async void IntractabilityCooldown(SliderSetting gameObject)
 		{
-			gameObject.interactable = false;
+			gameObject.Interactable = false;
 			await AwaitSleep(2000);
-			gameObject.interactable = true;
+			gameObject.Interactable = true;
 		}
 
 		private static async void IntractabilityCooldown(Selectable gameObject)

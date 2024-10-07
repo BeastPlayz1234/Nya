@@ -80,7 +80,8 @@ namespace Nya.UI.ViewControllers.NyaViewControllers
             }
         }
 
-        private void MenuActivated(ScenesTransitionSetupDataSO transitionSetupData, DiContainer diContainer)
+        // I haven't found any issues from just adding in fortnite, but sure this will hopefully work forever
+        private void MenuActivated(GameScenesManager.SceneTransitionType fortnite, ScenesTransitionSetupDataSO transitionSetupData, DiContainer diContainer)
         {
             _gameScenesManager.transitionDidFinishEvent -= MenuActivated;
 
@@ -95,7 +96,7 @@ namespace Nya.UI.ViewControllers.NyaViewControllers
                     _floatingScreenUtils.MenuFloatingScreen.transform.rotation = Quaternion.Euler(PluginConfig.MenuRotation);
                 }
                 
-                _floatingScreenUtils.MenuFloatingScreen.handle.SetActive(PluginConfig.ShowHandle);
+                _floatingScreenUtils.MenuFloatingScreen.Handle.SetActive(PluginConfig.ShowHandle);
             }
 
             NyaButton.interactable = false;
@@ -109,7 +110,7 @@ namespace Nya.UI.ViewControllers.NyaViewControllers
             });
         }
         
-        private void MenuDeactivated(ScenesTransitionSetupDataSO transitionSetupData, DiContainer diContainer)
+        private void MenuDeactivated(GameScenesManager.SceneTransitionType fortnite, ScenesTransitionSetupDataSO transitionSetupData, DiContainer diContainer)
         {
             _gameScenesManager.transitionDidFinishEvent -= MenuDeactivated;
             

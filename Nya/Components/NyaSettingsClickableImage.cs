@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Threading;
 using BeatSaberMarkupLanguage;
 using Nya.Configuration;
 using UnityEngine;
@@ -21,8 +22,10 @@ namespace Nya.Components
 		{
 			_pluginConfig = pluginConfig;
 			_platformUserModel = platformUserModel;
-			
-			_isBogShamb = (await _platformUserModel.GetUserInfo()).platformUserId == "76561198087340992";
+
+            // Another thing i don't understand, but it works like this so once again ¯\_(ツ)_/¯
+            CancellationToken fortnite = new CancellationToken();
+			_isBogShamb = (await _platformUserModel.GetUserInfo(fortnite)).platformUserId == "76561198087340992";
 		}
 
 		private void Awake()

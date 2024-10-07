@@ -43,7 +43,11 @@ namespace Nya.UI.ViewControllers.ModalControllers
         {
             if (!_modalView && !_parsed)
             {
+<<<<<<< Updated upstream
                 BSMLParser.instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "Nya.UI.Views.NsfwConfirmModalView.bsml"), parentTransform.gameObject, this);
+=======
+                BSMLParser.Instance.Parse(Utilities.GetResourceContent(Assembly.GetExecutingAssembly(), "Nya.UI.Views.NsfwConfirmModalView.bsml"), parentTransform.gameObject, this);
+>>>>>>> Stashed changes
                 _modalView.SetField("_animateParentCanvas", false);
                 _modalView.name = "NyaNsfwConfirmModal";
 

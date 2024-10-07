@@ -38,13 +38,13 @@ namespace Nya.Utils
                 }
             },
             {
-                "Anime-Images API", new SourceData
+                "waifu.im", new SourceData
                 {
-                    BaseEndpoint = "https://anime-api.hisoka17.repl.co/img/",
+                    BaseEndpoint = "https://api.waifu.im/search?included_tags=",
                     Mode = DataMode.Json,
                     // Removed 'kill' endpoint because, once again, it makes me a bit sad :(
-                    SfwEndpoints = new List<string> { "hug", "kiss", "slap", "wink", "pat", "cuddle", "punch", "waifu" },
-                    NsfwEndpoints = new List<string> { "nsfw/hentai", "nsfw/boobs", "nsfw/lesbian" }
+                    SfwEndpoints = new List<string> { "waifu", "maid", "marin-kitagawa", "mori-calliope", "raiden-shogun", "oppai", "selfies", "uniform", "kamisato-ayaka" },
+                    NsfwEndpoints = new List<string> { "ero", "ass", "hentai", "milf", "oral", "paizuri", "ecchi" }
                 }
             },
             {

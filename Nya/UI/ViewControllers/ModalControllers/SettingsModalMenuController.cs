@@ -39,7 +39,6 @@ namespace Nya.UI.ViewControllers.ModalControllers
         [UIAction("show-nya-settings")]
         private void ShowNyaSettings()
         {
-            ModalView.HandleBlockerButtonClicked();
             if (_nyaSettingsMainViewController.isActiveAndEnabled)
             {
                 return;

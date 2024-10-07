@@ -27,7 +27,7 @@ namespace Nya.UI.ViewControllers.NyaViewControllers
 		{
 			base.Initialize();
 			
-			GameplaySetup.instance.AddTab("Nya", "Nya.UI.Views.NyaView.bsml", this);
+			GameplaySetup.Instance.AddTab("Nya", "Nya.UI.Views.NyaView.bsml", this);
 
 			_gameplaySetupViewController.didActivateEvent += GameplaySetupViewControllerOnDidActivateEvent;
 			_gameplaySetupViewController.didDeactivateEvent += GameplaySetupViewControllerOnDidDeactivateEvent;
@@ -37,10 +37,14 @@ namespace Nya.UI.ViewControllers.NyaViewControllers
 		{
 			base.Dispose();
 			
+<<<<<<< Updated upstream
 			if (GameplaySetup.IsSingletonAvailable)
 			{
 				GameplaySetup.instance.RemoveTab("Nya");
 			}
+=======
+			GameplaySetup.Instance.RemoveTab("Nya");
+>>>>>>> Stashed changes
 			
 			_gameplaySetupViewController.didActivateEvent -= GameplaySetupViewControllerOnDidActivateEvent;
 			_gameplaySetupViewController.didDeactivateEvent -= GameplaySetupViewControllerOnDidDeactivateEvent;
