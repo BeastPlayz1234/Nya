@@ -1,6 +1,6 @@
 # NOTE
 This mod was originally made by [Sirspam](https://github.com/Sirspam/)
-I also barely know C# so if there's any issues with the mod, it's probably due to my patch job of putting this mod on the newer version
+I also barely know C# so if there's any issues with the mod, it's probably due to my patch job of putting this mod on the newer version.
 If anything doesn't work, dm me on discord (beastplayz_) or something
 
 # Nya <img src="https://raw.githubusercontent.com/Sirspam/Sirspam/main/chocola_mini_sitting.png" align="right" width="150">
