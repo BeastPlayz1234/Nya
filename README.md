@@ -17,7 +17,6 @@ Nya features a floating screen, allowing Nya to be accessed outside of the gamep
 * [Waifu.Pics](https://waifu.pics/)
 * [Nekos.Life](https://nekos.life/)
 * [Waifu.Im](https://www.waifu.im/)
-* [Catboys](https://catboys.com/)
 * [BocchiTheAPI](https://bocchi.pixelboom.dev/)
 * [Local Files](#local-files)
 ### Local Files
